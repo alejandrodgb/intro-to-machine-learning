@@ -23,7 +23,6 @@ Posterior Probability:
 
 ### Bayes Rule for Classification - Text Learning
 **Priors**
-
 | P(Word) | Chris | Sarah |
 |---------|-------|-------|
 | Love | 0.1 | 0.5 |
@@ -32,39 +31,43 @@ Posterior Probability:
 
 **Who wrote it?: Love Life!**
 
-P(Chris) * P(Love|Chris) * P(Life|Chris) = 0.5 * 0.1 * 0.1 = 0.005
-P(Sarah) * P(Love|Sarah) * P(Life|Sarah) = 0.5 * 0.3 * 0.3 = 
+- P(Chris) * P(Love|Chris) * P(Life|Chris) = 0.5 * 0.1 * 0.1 = 0.005
+- P(Sarah) * P(Love|Sarah) * P(Life|Sarah) = 0.5 * 0.3 * 0.3 = 
 0.045
 
 **Who wrote it? Life Deal**
-P(Chris) * P(Life|Chris) * P(Deal|Chris) = 0.5 * 0.1 * 0.8 = 0.04
-P(Sarah) * P(Life|Sarah) * P(Deal|Sarah) = 0.5 * 0.3 * 0.2 = 
+
+- P(Chris) * P(Life|Chris) * P(Deal|Chris) = 0.5 * 0.1 * 0.8 = 0.04
+- P(Sarah) * P(Life|Sarah) * P(Deal|Sarah) = 0.5 * 0.3 * 0.2 = 
 0.03
 
 What is the posterior probability?
-P(Chris|Life Deal)?
-P(Sarah|Life Deal)?
+
+- P(Chris|Life Deal)?
+- P(Sarah|Life Deal)?
 
 Normalisation
+
 P(Life Deal) = P(LifeDeal,Chris) + P(LifeDeal,Sarah) = 0.07
 
-P(Chris|Life Deal) = 0.04/0.07 = 0.57
-P(Sarah|Life Deal) = 0.03/0.07 = 0.43
+- P(Chris|Life Deal) = 0.04/0.07 = 0.57
+- P(Sarah|Life Deal) = 0.03/0.07 = 0.43
 
 **Who Wrote it? Love Deal**
-P(Chris) * P(Love|Chris) * P(Deal|Chris) = 0.5 * 0.1 * 0.8 = 0.04
-P(Sarah) * P(Love|Sarah) * P(Deal|Sarah) = 0.5 * 0.5 * 0.2 = 
+
+- P(Chris) * P(Love|Chris) * P(Deal|Chris) = 0.5 * 0.1 * 0.8 = 0.04
+- P(Sarah) * P(Love|Sarah) * P(Deal|Sarah) = 0.5 * 0.5 * 0.2 = 
 0.05
 
 What is the posterior probability?
-P(Chris|Love Deal)?
-P(Sarah|Love Deal)?
+- P(Chris|Love Deal)?
+- P(Sarah|Love Deal)?
 
 Normalisation
-P(Love Deal) = P(LoveDeal,Chris) + P(LoveDeal,Sarah) = 0.09
+- P(Love Deal) = P(LoveDeal,Chris) + P(LoveDeal,Sarah) = 0.09
 
-P(Chris|Life Deal) = 0.04/0.09 = 0.44
-P(Sarah|Life Deal) = 0.03/0.09 = 0.56
+- P(Chris|Life Deal) = 0.04/0.09 = 0.44
+- P(Sarah|Life Deal) = 0.03/0.09 = 0.56
 
 ### Strengths and Weaknesses
 <table>
