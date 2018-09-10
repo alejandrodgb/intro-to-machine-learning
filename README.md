@@ -90,3 +90,48 @@ Normalisation
         </td>
     </tr>
 </table>
+
+## SVM
+SVM = Support Vector Machines
+
+Support vector machines try to find a decision line where there is as much separation between the two classes as possible - maximum margin.
+
+### Parameters
+Arguments passed when creating the classifier.
+
+Parameters for an SVM (not exhaustive list):
+- kernel: Function that maps a low-dimentional feature space and map it to a high dimensional space. This makes non-linearly separable data, linearly separable.
+  - Process of the kernel trick: x,y (non separable) > X<sub>1</sub>X<sub>2</sub>X<sub>3</sub>X<sub>4</sub> (solution) > back to x,y with a non-linear separation
+- C: controls tradeoff between smooth decision boundary and classifying training points correctly. Large C will classify more training points correctly.
+- gamma: defines how far the influence of a single training example reaches.
+  - Low values - far reach: points further away from the decision bondary are taken into consideration when creating the decision boundary.
+  - High values - close reach: points close to the decision boundary are taken into consideration when creating the decision boundary. This might cause the model to ignore points further away.
+
+### Strengths and Weaknesses
+<table>
+    <tr>
+        <td>Strengths</td>
+        <td>Weaknessess</td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li>Work well in complicated domains with a clear margin of separation</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Don't perform well in large training datasets because training time = (data set size)<sup>3</sup></li>
+                <li>Don't work well with noice, so when the classes are overlapping you need to count independent evidence. Naive Bayes works better.</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+# Datasets and References
+- Sentiment classification using Naive Bayes: https://www.kaggle.com/marklvl/sentiment-classification-using-naive-bayes/notebook
+- Fraud Detection with Naive Bayes Classifier: https://www.kaggle.com/lovedeepsaini/fraud-detection-with-naive-bayes-classifier
+
+#To do
+- Create a plotter for decision boundary and data points
+
