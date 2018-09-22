@@ -1,5 +1,6 @@
 #!/usr/bin/python
 import random
+import numpy as np
 
 
 def makeTerrainData(n_points=1000):
@@ -17,10 +18,10 @@ def makeTerrainData(n_points=1000):
 ### split into train/test sets
     X = [[gg, ss] for gg, ss in zip(grade, bumpy)]
     split = int(0.75*n_points)
-    X_train = X[0:split]
-    X_test  = X[split:]
-    y_train = y[0:split]
-    y_test  = y[split:]
+    X_train = np.array(X[0:split])
+    X_test  = np.array(X[split:])
+    y_train = np.array(y[0:split])
+    y_test  = np.array(y[split:])
 
     grade_sig = [X_train[ii][0] for ii in range(0, len(X_train)) if y_train[ii]==0]
     bumpy_sig = [X_train[ii][1] for ii in range(0, len(X_train)) if y_train[ii]==0]
@@ -29,7 +30,6 @@ def makeTerrainData(n_points=1000):
 
     training_data = {"fast":{"grade":grade_sig, "bumpiness":bumpy_sig}
             , "slow":{"grade":grade_bkg, "bumpiness":bumpy_bkg}}
-
 
     grade_sig = [X_test[ii][0] for ii in range(0, len(X_test)) if y_test[ii]==0]
     bumpy_sig = [X_test[ii][1] for ii in range(0, len(X_test)) if y_test[ii]==0]
