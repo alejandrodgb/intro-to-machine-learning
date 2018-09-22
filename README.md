@@ -128,6 +128,15 @@ Parameters for an SVM (not exhaustive list):
     </tr>
 </table>
 
+## Decision Trees
+Ability to split data that is not lineraly related by braking it up in multiple linearly separable splits.
+
+### Entropy and Information Gain
+- Entropy: measure of impurity in the data
+
+
+![equation] (http://latex.codecogs.com/gif.latex?%5Csum%20-%28P_i%29%28log_2%29%28P_i%29)
+
 # Datasets and References
 - Sentiment classification using Naive Bayes: https://www.kaggle.com/marklvl/sentiment-classification-using-naive-bayes/notebook
 - Fraud Detection with Naive Bayes Classifier: https://www.kaggle.com/lovedeepsaini/fraud-detection-with-naive-bayes-classifier
