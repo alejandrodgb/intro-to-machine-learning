@@ -134,8 +134,37 @@ Ability to split data that is not lineraly related by braking it up in multiple 
 ### Entropy and Information Gain
 - Entropy: measure of impurity in the data
 
+Entropy = SUM((P_i)(log_2(P_i)))
 
-![equation] (http://latex.codecogs.com/gif.latex?%5Csum%20-%28P_i%29%28log_2%29%28P_i%29)
+- The information gain is based on the decrease of entropy after a dataset is split on an attribute.
+
+Information gain = Entropy(parent)-[weighted average]Entropy(children)
+
+### Bias-Variance Dilema
+- High-bias: algorythm that ignores new data. 
+- High variance: algorythm that is extremely sensitive to new data and can only react to previously seen events.
+
+### Strengths and Weaknesses
+<table>
+    <tr>
+        <td>Strengths</td>
+        <td>Weaknessess</td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li>Easy to use</li>
+                <li>Easier to visually interpret the training algorythm</li>
+                <li>Ability to build bigger classifiers through ensemble methods</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Prone to overfitting: specially with data with lots of features</li>
+            </ul>
+        </td>
+    </tr>
+</table>
 
 # Datasets and References
 - Sentiment classification using Naive Bayes: https://www.kaggle.com/marklvl/sentiment-classification-using-naive-bayes/notebook
