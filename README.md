@@ -166,6 +166,36 @@ Information gain = Entropy(parent)-[weighted average]Entropy(children)
     </tr>
 </table>
 
+## Regression
+### Linear Regression Errors
+- Error: difference between actual observation and predicted value by the regression model
+
+### Evaluating Linear Regression
+1. Minimize the sum of the squared errors
+  - Algorythms to reduce sum of squared errors
+    - OLS: Ordinary Least Squares
+    - Gradient Descent
+  - Problem sith SSE (Sum of Squared Errors): As data increases, the SSE will most likely also increase pointing to a worse fit of the model
+
+2. r<sup>2</sup>
+- Amount pf change in the output explained by change in the input
+- Independent of the number of points
+
+### Classification and Regression - Comparison
+<table>
+    <tr>
+        <td>Property</td>
+        <td>Supervised Classification</td>
+        <td>Regression</td>
+    </tr>
+    <tr>
+        <td>a</td>
+        <td>b</td>
+        <td>c</td>
+    </tr>
+</table>
+
+
 # Datasets and References
 - Sentiment classification using Naive Bayes: https://www.kaggle.com/marklvl/sentiment-classification-using-naive-bayes/notebook
 - Fraud Detection with Naive Bayes Classifier: https://www.kaggle.com/lovedeepsaini/fraud-detection-with-naive-bayes-classifier
