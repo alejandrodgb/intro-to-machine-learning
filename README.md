@@ -189,6 +189,31 @@ Information gain = Entropy(parent)-[weighted average]Entropy(children)
         <td>Regression</td>
     </tr>
     <tr>
+        <td>Output type</td>
+        <td>Discrete (classes)</td>
+        <td>Continuous (number)</td>
+    </tr>
+    <tr>
+        <td>What are you trying to find?</td>
+        <td>Decision boundary</td>
+        <td>Best fit line</td>
+    </tr>
+    <tr>
+        <td>How to evaluate?</td>
+        <td>
+            <ul>
+                <li>Accuracy</li>
+                <li>Confusion matrix</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>SSE</li>
+                <li>r<sup>2</sup></li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
         <td>a</td>
         <td>b</td>
         <td>c</td>
