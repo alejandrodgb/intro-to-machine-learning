@@ -213,13 +213,13 @@ Information gain = Entropy(parent)-[weighted average]Entropy(children)
             </ul>
         </td>
     </tr>
-    <tr>
-        <td>a</td>
-        <td>b</td>
-        <td>c</td>
-    </tr>
 </table>
 
+## K-means Clustering
+Unsupervised learning algorythm used to asign classes.
+
+### Limitations
+- K-means can get stuck on a local minima depending on where the points were originally assigned
 
 # Datasets and References
 - Sentiment classification using Naive Bayes: https://www.kaggle.com/marklvl/sentiment-classification-using-naive-bayes/notebook
