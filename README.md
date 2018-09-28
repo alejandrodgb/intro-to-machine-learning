@@ -255,6 +255,25 @@ Unsupervised learning algorythm used to asign classes.
 ### Regularisation in Regression
 - Lasso regresion: trying to minimise SSE + penatly factor for extra features
 
+## PCA - Principal Component Analysis
+- Systematised way to transform input features to their principal components.
+- Principal components can be used as new features.
+- Principal components are the direction in the data that minimizes the variance (minimize the information loss) when you project/compress down to them.
+- Principal components can be ranked on the variance of data, higher variance are ranked better.
+- All principal components are orthogonal - they can be treated as independent features.
+- Max number of PC is the total number of features.
+- Reduce dimensionality of data by changing the axes to project the major axis on the direction of highest variance in the data.
+- Projection onto the direction of maximal variance minimizes the distance from higher dimensional data point to its new transformed value.
+
+### When to use PCA?
+- Gain access to latent features driving patterns in the data
+- Dimensionality reduction
+  - Visualise high-dimensional data
+  - Reduce noise
+  - Preprocessing for other algorythms (regression, classification) - algorythm works better with fewer inputs
+  
+
+
 # Datasets and References
 - Sentiment classification using Naive Bayes: https://www.kaggle.com/marklvl/sentiment-classification-using-naive-bayes/notebook
 - Fraud Detection with Naive Bayes Classifier: https://www.kaggle.com/lovedeepsaini/fraud-detection-with-naive-bayes-classifier
