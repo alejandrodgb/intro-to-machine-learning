@@ -221,6 +221,40 @@ Unsupervised learning algorythm used to asign classes.
 ### Limitations
 - K-means can get stuck on a local minima depending on where the points were originally assigned
 
+## Feature Selection
+- Features != information: features attempt to access information, they are not information themselves.
+- Use as little features as possible, but no less.
+
+### Bias-variance dilemma and the number of features
+<table>
+    <tr>
+        <td>High Bias</td>
+        <td>High Variance</td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li>Pays little attention to training data</li>
+                <li>Oversimplified</li>
+                <li>High error on training set</li>
+                <li>Use of too few features</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>Too much attention to data</li>
+                <li>Does not generalise well</li>
+                <li>Overfits</li>
+                <li>Bad fit to test data</li>
+                <li>Use too many features with carefully  tunned parametes</li>
+            </ul>
+        </td>
+    </tr>
+</table>
+
+### Regularisation in Regression
+- Lasso regresion: trying to minimise SSE + penatly factor for extra features
+
 # Datasets and References
 - Sentiment classification using Naive Bayes: https://www.kaggle.com/marklvl/sentiment-classification-using-naive-bayes/notebook
 - Fraud Detection with Naive Bayes Classifier: https://www.kaggle.com/lovedeepsaini/fraud-detection-with-naive-bayes-classifier
