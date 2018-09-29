@@ -272,7 +272,59 @@ Unsupervised learning algorythm used to asign classes.
   - Reduce noise
   - Preprocessing for other algorythms (regression, classification) - algorythm works better with fewer inputs
   
+## Validation
+### Where to use training v testing data?
+Sample process:
+<table>
+    <tr>
+        <td><b>Train/test split ></b></td>
+        <td><b>PCA ></b></td>
+        <td><b>clf/reg</b></td>
+    </tr>
+    <tr>
+        <td>
+            <ul>
+                <li>Training features</li>
+                <li>Testing features</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>pca.fit</li>
+                <li>pca.transform</li>
+            </ul>
+        </td>
+        <td>
+            <ul>
+                <li>clf/reg.fit</li>
+                <li>clf/reg.predict</li>
+            </ul>
+        </td>
+    </tr>
+    <tr>
+        <td></td>
+        <td>
+            <ul>
+                <li>Fit on training data</li>
+                <li>Transform traing and test data</li>
+            </ul>
+        </td>
+        <td>Train with data projection from pca on training features</td>
+    </tr>
+</table>
 
+### Cross validation
+#### Cross validation for test/train datasets
+- Data is divided in <i>k</i> bins
+- Experiment is run <i>k</i> times separately with one bin being the test set and the otheres the training set. The test set bin is then alternated <i>k</i> times between all bins.
+- Average the test results of all the experiments 
+- Available in sklearn as KFold cross validation
+
+**Warning**: KFold cross validation partitions the data in K bins without randomising the data. Any patterns in the order of the data will be highlighted when doing cross validation. To deal with this, data must be randomised before using cross validation.
+
+#### Cross validation for parameter tunning
+- GridSearchCV is a way of systematically working through multiple combinations of parameter tunes, cross-validating as it goes to determine which tune gives the best performance.
+- After testing, the parameters are available in clf.best_params_
 
 # Datasets and References
 - Sentiment classification using Naive Bayes: https://www.kaggle.com/marklvl/sentiment-classification-using-naive-bayes/notebook
