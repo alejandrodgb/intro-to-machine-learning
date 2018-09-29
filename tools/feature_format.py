@@ -115,11 +115,17 @@ def targetFeatureSplit( data ):
         input formats when training/predicting)
     """
 
+    '''
+    ORIGINAL CODE
     target = []
     features = []
     for item in data:
         target.append( item[0] )
-        features.append( item[1:] )
+        features.append( item[1:] )'''
+
+    target = data[:,0].reshape(1, -1)
+    features = data[:,1].reshape(1,-1)
+
 
     return target, features
 
