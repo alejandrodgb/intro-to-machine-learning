@@ -123,7 +123,7 @@ def targetFeatureSplit( data ):
         target.append( item[0] )
         features.append( item[1:] )'''
 
-    target = data[:,0].reshape(-1,1)
+    target = data[:,0]
     features = data[:,1].reshape(-1,1)
 
 
