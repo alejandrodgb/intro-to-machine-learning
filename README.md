@@ -326,6 +326,80 @@ Sample process:
 - GridSearchCV is a way of systematically working through multiple combinations of parameter tunes, cross-validating as it goes to determine which tune gives the best performance.
 - After testing, the parameters are available in clf.best_params_
 
+## Evaluation Metrics
+- Accuracy: number of correct predictions/number of total predictions
+- Recall: True Positive / (True Positive + False Negative). Out of all the items that are truly positive, how many were correctly classified as positive. Or simply, how many positive items were 'recalled' from the dataset. 
+  - P(Classified positive|Truly positive)
+- Precision: True Positive / (True Positive + False Positive). Out of all the items labeled as positive, how many truly belong to the positive class. 
+  - P(Trully positive|Classified positive)
+
+## Summary
+1. Datasets and questions
+  - Do I have enough data?
+  - Can I define the question?
+  - Do I have enough/the right features to answer the question?
+2. Features
+  - Exploration
+    - Inspect for correlations
+    - Outlier removal
+    - Imputation
+    - Cleaning
+  - Creation
+    - Think about it like a human
+  - Representation
+    - Test vectorisation
+    - Dicretization
+  - Selection
+    - KBest
+    - Percentile
+    - Recursive feature elimination
+  - Transforms
+    - PCA
+    - ICA
+  - Scaling
+    - Mean substraction
+    - Minmax scaler
+    - Standard scaler
+3. Algorithms
+  - Pick your algorithm
+    - Unsupervised (no labels in data)
+      - K-means clustering
+      - Spectral clustering
+      - PCA
+      - Mixture models / EM algorithm
+      - Outlier detection
+    - Supervised (labelled data)
+      - non-ordered or discrete output 
+        - Decision trees
+        - Naive Bayes
+        - SVM
+        - Ensembles
+        - K nearest neighbours
+        - LDA
+        - Logistic regression
+      - ordered or continuous output
+        - Linear regression
+        - Lasso regression
+        - Decision tree regression
+        - SV regression
+  - Tune your algorithm
+    - Parameters of algorithm
+    - Visual inspection
+    - Performance on test data
+    - GridSearchCV
+4. Evaluation
+  - Validate
+    - Train/test split
+    - KFold
+    - Visualise
+  - Pick metrics
+    - SSE/R<sup>2</sup>
+    - Precission
+    - Recall
+    - F1 score
+    - ROC curve
+    - Bias/Variance
+
 # Datasets and References
 - Sentiment classification using Naive Bayes: https://www.kaggle.com/marklvl/sentiment-classification-using-naive-bayes/notebook
 - Fraud Detection with Naive Bayes Classifier: https://www.kaggle.com/lovedeepsaini/fraud-detection-with-naive-bayes-classifier
