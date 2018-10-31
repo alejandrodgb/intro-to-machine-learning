@@ -124,7 +124,12 @@ def targetFeatureSplit( data ):
         features.append( item[1:] )'''
 
     target = data[:,0]
-    features = data[:,1].reshape(-1,1)
+    if len(data)>2:
+        features = data[:,1:]
+    elif len(data)==2:
+        features = data[:,1:].reshape(-1,1)
+    else:
+        features = None
 
 
     return target, features
