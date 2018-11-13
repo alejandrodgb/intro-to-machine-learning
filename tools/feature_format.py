@@ -116,20 +116,21 @@ def targetFeatureSplit( data ):
     """
 
     
-    '''# ORIGINAL CODE
+    # Original code
     target = []
     features = []
     for item in data:
         target.append( item[0] )
-        features.append( item[1:] )'''
+        features.append( item[1:] )
 
+    '''# Proposed modification
     target = data[:,0]
     if len(data)>2:
         features = data[:,1:]
     elif len(data)==2:
         features = data[:,1:].reshape(-1,1)
     else:
-        features = None
+        features = None'''
 
 
     return target, features
