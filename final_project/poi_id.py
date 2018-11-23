@@ -9,7 +9,7 @@ sys.path.append("../tools/")
 #from feature_format import featureFormat, targetFeatureSplit
 from tester import dump_classifier_and_data, test_classifier
 
-print('all libraries imported')
+print('Libraries imported')
 
 ### Task 1: Select what features you'll use.
 ### features_list is a list of strings, each of which is a feature name.
@@ -50,7 +50,7 @@ email_features= ['to_messages', 'from_poi_to_this_person', 'from_messages',
 for feat in continuous_features:
     df[feat]=df[feat].astype(float)
 
-# invalid rows. See poi_id.ipynb notebook for cleaning analysis
+# invalid rows. See poi_working_notebook.ipynb notebook for cleaning analysis
 rows_to_remove = [84,130,127]
 df.drop(rows_to_remove, axis=0, inplace=True)
 
@@ -61,7 +61,7 @@ cols_values=[137864, 137864, 15456290, 2604490, -2604490, 15456290]
 df.iloc[11,valid_cols]=cols_values
 df.iloc[11,nan_cols]=np.nan
 
-print('dataframe corrected')
+print('Dataframe loaded and corrected')
 ### Task 3: Create new feature(s)
 ### Store to my_dataset for easy export below.
 
@@ -80,7 +80,8 @@ df.loc[df[df.email_address=='NaN'].index,'email_address']=np.nan
 df['poi']=df.poi.apply(lambda x: 1 if x else 0)
 data_dict = df.set_index('full_name').to_dict(orient='index')
 
-print('new features created and data_dict created')
+print('New features created')
+print('data_dict created')
 
 # convert np.nan to 'NaN' for compatibility with tester
 for k,v in data_dict.items():
@@ -98,7 +99,7 @@ print('data_dict to my_dataset')
 features = np.array(df[features_list].fillna(0).iloc[:,1:])
 labels = np.array(df[features_list].fillna(0).iloc[:,0])
 
-print('features and labels created')
+print('Features and labels created')
 
 ### Task 4 & 5: Try a varity of classifiers
 ### Please name your classifier clf for easy export below.
@@ -112,7 +113,7 @@ print('features and labels created')
 ### stratified shuffle split cross validation. For more info: 
 ### http://scikit-learn.org/stable/modules/generated/sklearn.cross_validation.StratifiedShuffleSplit.html
 
-
+print('Start training')
 
 # Example starting point. Try investigating other evaluation techniques!
 from sklearn import model_selection
@@ -134,4 +135,4 @@ test_classifier(clf, my_dataset, features_list)
 ### generates the necessary .pkl files for validating your results.
 
 dump_classifier_and_data(clf, my_dataset, features_list)
-print('code ran successfully')
+print('Process finalised')
